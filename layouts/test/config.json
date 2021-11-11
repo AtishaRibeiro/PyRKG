@@ -1,0 +1,94 @@
+{
+    "width": 420,
+    "height": 200,
+    "bg_color": [0, 255, 0],
+    "components": [
+        {
+            "name": "Categorical_C",
+            "input_type": "trick",
+            "info": {
+                "categories": {
+                    "0": {
+                        "position": [50, 50],
+                        "image": "dpad.png"
+                    },
+                    "1": {
+                        "position": [50, 50],
+                        "image": "dpad_1.png"
+                    },
+                    "2": {
+                        "position": [50, 50],
+                        "image": "dpad_2.png"
+                    },
+                    "3": {
+                        "position": [50, 50],
+                        "image": "dpad_3.png"
+                    },
+                    "4": {
+                        "position": [50, 50],
+                        "image": "dpad_4.png"
+                    }
+                }
+            }
+        }, 
+        {
+            "name": "StaticImage",
+            "info": {
+                "position": [300, 50],
+                "image": "analog_square.png"
+            }
+        },
+        {
+            "name": "Tuple_C",
+            "input_type": "analog",
+            "info": {
+                "position": [300, 50],
+                "image": "analog_dot.png",
+                "pos_range": [45, 45]
+            }
+        },
+        {
+            "name": "Categorical_C",
+            "input_type": "a_btn",
+            "info": {
+                "categories": {
+                    "0": {
+                        "position": [170, 10],
+                        "image": "button_empty.png"
+                    },
+                    "1": {
+                        "position": [170, 10],
+                        "image": "button_filled.png"
+                    }
+                }
+            }
+        },
+        {
+            "name": "Categorical_C",
+            "input_type": "b_btn",
+            "info": {
+                "categories": {
+                    "0": {
+                        "position": [170, 80],
+                        "image": "button_empty.png"
+                    },
+                    "1": {
+                        "position": [170, 80],
+                        "image": "button_filled.png"
+                    }
+                }
+            }
+        },
+        {
+            "name": "Text_C",
+            "input_type": "l_btn",
+            "info": {
+                "position": [20, 20],
+                "font": "FOT-RodinNTLGPro-EB_1.otf",
+                "size": 20,
+                "stroke_width": 3,
+                "stroke_fill": [0, 0, 0]
+            }   
+        }
+    ]
+}
