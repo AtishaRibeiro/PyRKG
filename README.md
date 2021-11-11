@@ -36,11 +36,11 @@ This will make live updates of the `config.json` file.
 The only file that is absolutely necessary is the `config.json` file which looks like this:
 ```json
 {
-	"width": int,
-	"height": int,
-	"bg_color": [int, int, int]
+	"width": "int",
+	"height": "int",
+	"bg_color": ["int", "int", "int"]
 	"components": [
-		...
+		"..."
 	]
 }
 ```
@@ -49,10 +49,10 @@ There are several default components which can be found in `src/Component.py`
 Components should be specified as follows:
 ```json
 {
-	"name": str,
-	"input_type": str
+	"name": "str",
+	"input_type": "str"
 	"info": {
-		...
+		"..."
 	}
 }
 ```
