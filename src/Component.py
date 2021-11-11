@@ -68,7 +68,17 @@ class Text_C(Component):
     info_format = {
         "position": list, # [x, y]
         "font": str, # font file name
-        "size": int # font size
+        "size": int, # font size
+        
+        # The following are all optional, they are all directly taken from Pillow's text function 
+        # https://pillow.readthedocs.io/en/stable/reference/ImageDraw.html#PIL.ImageDraw.ImageDraw.text
+
+        "fill": [int, int, int], # text colour
+        "spacing": int, # if multiline text, the number of pixels between the lines
+        "align": str, # if multiline text, "left", "center" or "right"
+        "direction": str, # if multiline text, "rtl" (right to left), "ltr" (left to right) or "ttb" (top to bottom)
+        "stroke_width": int, # text stroke width, also known as text border
+        "stroke_fill": [int, int, int] # text stroke colour
     }
 
     def init_component(self, info: dict):
