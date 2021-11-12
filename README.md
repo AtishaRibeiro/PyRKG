@@ -28,7 +28,7 @@ This will generate a video in the same folder as `main.py`. There are a few vide
 
 ### Making your own Layouts
 Layouts reside in the `layouts` folder. To make a new layout simply create a folder there.
-*Make sure to check the `layouts/test` layout to get an idea of what it should look like!*
+*Make sure to check the layouts already present in this repo to get an idea of what it should look like!*
 
 In order to see what the layout looks like while you're editing, run `python main.py -l <layout> -t`.
 This will make live updates of the `config.json` file.
