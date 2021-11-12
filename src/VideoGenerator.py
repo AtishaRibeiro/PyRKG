@@ -14,7 +14,7 @@ class VideoGenerator:
 
         self.controller.read_json(layout)
         self.inputs = Inputs()
-        self.inputs.read_ghost_file(ghost_file)
+        self.inputs.read_file(ghost_file)
 
     def run(self):
         #video = cv2.VideoWriter(f"demp.{VIDEO_EXTENSION}", cv2.VideoWriter_fourcc(*VIDEO_CODEC), VIDEO_FRAME_RATE, self.controller.size)
