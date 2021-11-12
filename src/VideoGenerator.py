@@ -9,12 +9,11 @@ from .CONFIG import *
 class VideoGenerator:
 
     def __init__(self, layout, ghost_file):
-        self.internal_frame_rate = 59.94
         self.controller = Controller()
 
         self.controller.read_json(layout)
         self.inputs = Inputs()
-        self.inputs.read_file(ghost_file)
+        self.internal_frame_rate = self.inputs.read_file(ghost_file)
 
     def run(self):
         #video = cv2.VideoWriter(f"demp.{VIDEO_EXTENSION}", cv2.VideoWriter_fourcc(*VIDEO_CODEC), VIDEO_FRAME_RATE, self.controller.size)

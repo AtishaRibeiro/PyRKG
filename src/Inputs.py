@@ -16,10 +16,13 @@ class Inputs:
         extension = file_name.split('.')[-1]
         if extension == "rkg":
             self.read_ghost_file(file_name)
+            return 59.94
         elif extension == "dtm":
             self.read_dtm(file_name)
+            return 180
         else:
             self.read_ghost_file(file_name)
+            return 59.94
 
     def read_ghost_file(self, file_name):
         with open(file_name, "rb") as f:
