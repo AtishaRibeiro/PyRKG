@@ -17,8 +17,8 @@ Currently the image processing backend is done with Pillow but this is extremely
 
 ### Running PyRKG
 The main command is `python main.py -l <layout> -g <ghost_file>` where:
--  `<layout>` is the name of the layout you want to use (the name of the folder in `layouts`
-- `<ghost_file>` is the path to the ghost file you want to make a video of
+-  `<layout>` is the name of the layout you want to use (the name of the folder in `layouts`)
+- `<ghost_file>` is the path to the ghost file you want to make a video of. Support formats are: `rkg`, `dtm`, `csv`, `txt`
 
 This will generate a video in the same folder as `main.py`. There are a few video settings you can specify, these can be found in `src/CONFIG.py`:
 

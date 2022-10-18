@@ -1,3 +1,4 @@
+import csv
 from math import floor
 from .Decomp import decode_RKG
 
@@ -20,6 +21,9 @@ class Inputs:
         elif extension == "dtm":
             self.read_dtm(file_name)
             return 180
+        elif extension == "csv" or extension == "txt":
+            self.read_tas_text_file(file_name)
+            return 59.94
         else:
             self.read_ghost_file(file_name)
             return 59.94
@@ -113,6 +117,14 @@ class Inputs:
             bitfield >>= 1 #This will make a list of least to most significant bits.
         # output_list.reverse()
         return output_list
+    
+    def read_tas_text_file(self, file_name):
+        with open(file_name, "r") as f:
+            reader = csv.reader(f)       
+            for line in reader:
+                if len(line) < 6:
+                    raise Exception(f"Malformed line in text file: {line}")
+                self.inputs.append([int(line[0]), int(line[1]), int(line[2]), int(line[4]) + 7, int(line[3]) + 7, int(line[5])])
 
 
 if __name__ == "__main__":
