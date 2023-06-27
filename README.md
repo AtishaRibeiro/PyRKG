@@ -13,7 +13,9 @@ Currently the image processing backend is done with Pillow but this is extremely
 ### Prerequisites
 - Have Python installed, download [here](https://www.python.org/downloads/)
 - Have the `Pillow` library installed, after installing Python run `pip install Pillow`
-- Download `FFMPEG` from [here](https://github.com/BtbN/FFmpeg-Builds/releases) and place the `ffmpeg.exe` in the same folder as `main.py`
+- Have `ffmpeg`
+  - **Windows:** Download `ffmpeg` from [here](https://github.com/BtbN/FFmpeg-Builds/releases) and place the `ffmpeg.exe` in the same folder as `main.py`
+	- **Linux:** Install `ffmpeg` through your package manager
 
 ### Running PyRKG
 The main command is `python main.py -l <layout> -g <ghost_file>` where:

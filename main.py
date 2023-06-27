@@ -2,25 +2,28 @@ import sys, getopt
 from src.VideoGenerator import VideoGenerator
 from src.TestSuite import TestSuite
 
+
 def main(argv):
     try:
-      opts, args = getopt.getopt(argv,"hl:g:t",["layout=","ghost="])
+        opts, args = getopt.getopt(argv, "hl:g:t", ["layout=", "ghost="])
     except getopt.GetoptError:
-      print("Incorrect format: main.py -h for info")
-      sys.exit(2)
+        print("Incorrect format: main.py -h for info")
+        sys.exit(2)
 
     layout = None
     ghost = None
     test_suite = False
     for opt, arg in opts:
         if opt == "-h":
-            print("""\t    -h\t show command usage
+            print(
+                """\t    -h\t show command usage
             -l | --layout <layout>\t specify the layout to be used
             -g | --ghost <ghostfile>\t specify the ghost file to be read
             -t\t run the test suite to preview the layout\n
             example usage:
             main.py -l layout1 -g ghost.rkg OR
-            main.py -l layout1 -t""")
+            main.py -l layout1 -t"""
+            )
             sys.exit(2)
 
         elif opt in ("-l", "--layout"):
@@ -46,4 +49,4 @@ def main(argv):
 
 
 if __name__ == "__main__":
-   main(sys.argv[1:])
+    main(sys.argv[1:])
